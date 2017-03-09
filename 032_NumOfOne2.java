@@ -2,8 +2,6 @@
  * Created by Administrator on 2017/3/8.
  */
 
-
-
 public class NumOfOne {
    public int numberOfOneBetweenOneAndN(int n) {
        int count = 0;
