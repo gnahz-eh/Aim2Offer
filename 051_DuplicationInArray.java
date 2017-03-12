@@ -16,6 +16,8 @@ public class DuplicationInArray {
 //        return false;
 //    }
 
+    
+    // time O(n), space O(1)
     public boolean duplicate(int nums[], int length, int[] duplication) {
         if (nums == null || length <= 0)
             return false;
