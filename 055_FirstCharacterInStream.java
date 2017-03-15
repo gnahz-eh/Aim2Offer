@@ -12,10 +12,10 @@ public class FirstCharacterInStream {
         Arrays.fill(hashMap, -1);
 
         for (int i = 0; i < s.length(); i++) {
-            if (hashMap[s.charAt(i) - '0'] == -1)
-                hashMap[s.charAt(i) - '0'] = i;
-            else if (hashMap[s.charAt(i) - '0'] >= 0)
-                hashMap[s.charAt(i) - '0'] = -1;
+            if (hashMap[s.charAt(i)] == -1)
+                hashMap[s.charAt(i)] = i;
+            else if (hashMap[s.charAt(i)] >= 0)
+                hashMap[s.charAt(i)] = -1;
         }
 
         int minIndex = 257;
@@ -24,7 +24,7 @@ public class FirstCharacterInStream {
         for (; i < hashMap.length; i++) {
             if (hashMap[i] >= 0 && hashMap[i] < minIndex) {
                 minIndex = hashMap[i];
-                res = (char)(i+'0');
+                res = (char) i;
             }
         }
         return res;
