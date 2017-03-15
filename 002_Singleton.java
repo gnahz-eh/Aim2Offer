@@ -13,5 +13,5 @@ public class Singleton {
 		}
 		return unique;
 	}
-}
+} 
 
