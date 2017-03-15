@@ -1,3 +1,4 @@
+// 双重检查锁
 public class Singleton {
     private volatile static Singleton unique;
 	
@@ -15,3 +16,27 @@ public class Singleton {
 	}
 } 
 
+// 急切实例化
+public class Singleton {
+    private static Singleton unique = new Singleton();
+	
+	private Singleton() {}
+	
+	public static Singleton getInstance() {
+		return unique;
+	}
+} 
+
+// 同步getInstance方法 
+public class Singleton {
+    private volatile static Singleton unique;
+	
+	private Singleton() {}
+	
+	public static synchronized Singleton getInstance() {
+		if (unique == null) {                      		
+			unique = new Singleton();
+		}
+		return unique;
+	}
+} 
