@@ -21,6 +21,7 @@ class ListNode {
 
 public class PrintListInReversedOrder {
 
+    // use a stack to store the elements;
     public void printListReversingly (ListNode head) {
         Stack<ListNode> stack = new Stack<ListNode>();
         ListNode temp = head;
