@@ -17,6 +17,7 @@ class Queue<T> {
     public void appendTail(T element) {
         stack1.push(element);
     }
+    // 判断stack2的状态，非空直接弹出，空则将stack1所有的元素压入stack2
     public T deleteHead() {
         if (stack2.size() <= 0) {
             while (stack1.size() > 0) {
