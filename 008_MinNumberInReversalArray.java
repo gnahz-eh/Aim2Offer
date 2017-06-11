@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2017/3/4.
  */
+// leetcode_153
 public class MinNumberInReversalArray {
 
     int min(int[] nums) {
