@@ -18,6 +18,7 @@ class Index {
 
 public class FindInPartiallySortedMatrix {
 
+    // select the up-right num as the standard element, update the row and col
     public Index find (int[][] matrix, int rows, int cols, int key) {
         if (matrix != null && rows > 0 && cols > 0) {
             int row = 0;
