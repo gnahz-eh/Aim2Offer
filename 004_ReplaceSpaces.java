@@ -3,6 +3,7 @@
  */
 public class ReplaceSpaces {
 
+    // count the number of the blank, and start from the end when construct the new string;
     public String ReplaceBlank (String str) {
 
         if (str == null || str.length() <= 0)
