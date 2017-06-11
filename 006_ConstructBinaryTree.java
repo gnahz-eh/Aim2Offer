@@ -1,8 +1,33 @@
-import sun.reflect.generics.tree.Tree;
-
 /**
  * Created by Administrator on 2017/3/2.
  */
+
+// good solution
+// leetcode_105
+public class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return helper(0, preorder.length - 1, 0, inorder.length - 1, preorder, inorder);
+    }
+    private TreeNode helper(int preStart, int preEnd, int inStart, int inEnd, int[] preorder, int[] inorder) {
+        if(preStart > preEnd || inStart > inEnd) return null;
+        TreeNode root = new TreeNode(preorder[preStart]);
+        int edge = 0;
+        for (int i = inStart, j = inEnd; i <= j; i++, j--) {
+            if (inorder[i] == root.val) {
+                edge = i;
+                break;
+            }
+            if (inorder[j] == root.val) {
+                edge = j;
+                break;
+            }
+        }
+        int leftLen = edge - inStart;
+        root.left = helper(preStart + 1, preStart + leftLen, inStart, edge - 1, preorder, inorder);
+        root.right = helper(preStart + 1 + leftLen, preEnd, edge + 1, inEnd, preorder, inorder);
+        return root;
+    }
+}
 
 class TreeNode {
     public int val;
