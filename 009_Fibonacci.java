@@ -2,7 +2,8 @@
  * Created by Administrator on 2017/3/4.
  */
 public class Fibonacci {
-
+    
+    // 递归效率低，使用迭代
     long fib(int n) {
         long yesterday = 0;
         long today = 1;
