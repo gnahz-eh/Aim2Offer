@@ -2,7 +2,8 @@
  * Created by Administrator on 2017/3/4.
  */
 public class NumberOfOneInBinary {
-
+    
+    // n & n-1 可以将最低位上的1清零
     int numberOfOne(int n) {
         int count = 0;
         while (n != 0) {
