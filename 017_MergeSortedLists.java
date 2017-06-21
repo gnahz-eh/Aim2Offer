@@ -2,7 +2,8 @@
  * Created by Administrator on 2017/3/6.
  */
 public class MergeSortedLists {
-
+    
+    // leetcode 021
     public ListNode merge(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
