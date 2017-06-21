@@ -2,7 +2,8 @@
  * Created by Administrator on 2017/3/5.
  */
 public class KthNodeFromEnd {
-
+    
+    // tow pointers 
     public ListNode findKthToTail (ListNode head, int k) {
         if (head == null || k == 0)
             return null;
