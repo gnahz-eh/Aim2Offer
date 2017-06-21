@@ -3,6 +3,21 @@
  */
 public class ReverseList {
 
+    public ListNode reverse2(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
+    }
+
+    
     public ListNode reverse(ListNode head) {
         if (head == null || head.next == null)
             return head;
