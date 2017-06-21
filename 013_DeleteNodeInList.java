@@ -18,7 +18,7 @@ class ListNode {
 }
 
 public class DeleteNodeInList {
-
+    // leetcode 237
     public void deleteNode(ListNode head, ListNode toBeDel) {
         if (head == null || toBeDel == null)
             return;
@@ -27,10 +27,10 @@ public class DeleteNodeInList {
             ListNode pNext = toBeDel.next;
             toBeDel.value = pNext.value;
             toBeDel.next = pNext.next;
-        } else if (head == toBeDel) {
+        } else if (head == toBeDel) {      // delete head
             head = null;
         } else {
-            ListNode temp = head;
+            ListNode temp = head;          // delete tail
             while (temp.next != toBeDel)
                 temp = temp.next;
             temp.next = null;
