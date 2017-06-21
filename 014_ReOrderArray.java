@@ -6,7 +6,8 @@ public class ReOrderArray {
     public void reOrderOddEven(int[] nums) {
         if (nums == null) return;
         int len = nums.length;
-
+        
+        // 从两端向中间收缩
         int left = 0;
         int right = len - 1;
 
