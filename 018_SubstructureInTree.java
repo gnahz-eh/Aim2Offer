@@ -22,6 +22,7 @@ class TreeNode {
 
 public class SubstructureInTree {
 
+    // root->left->right
     public boolean hasSubTree(TreeNode t1, TreeNode t2) {
         boolean res = false;
         if (t1 != null && t1 != null) {
